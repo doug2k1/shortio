@@ -41,8 +41,8 @@ module.exports = [
             });
 
             newRedir.save((err, redir) => {
-                if (err) { reply(err); }
-                else { reply(redir); }
+                if (err) reply(err);
+                else reply(redir);
             });
         },
         config: {
@@ -62,9 +62,9 @@ module.exports = [
             };
 
             Redir.findOne(query, (err, redir) => {
-                if (err) { return reply(err); }
-                else if (redir) { reply().redirect(redir.url); }
-                else { reply.file('views/404.html').code(404); }
+                if (err) return reply(err);
+                else if (redir) reply().redirect(redir.url);
+                else reply.file('views/404.html').code(404);
             });
         }
     }

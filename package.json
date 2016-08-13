@@ -4,6 +4,7 @@
   "description": "",
   "main": "shortener.js",
   "scripts": {
+    "db": "docker run -d -p 27017:27017 mongo",
     "start": "node shortener.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

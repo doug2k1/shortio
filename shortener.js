@@ -5,7 +5,7 @@ const plugins = [
 ];
 const routes = require('./routes');
 
-const mongoUri = process.env.MOGOURI || 'mopngodb://localhost/shortio';
+const mongoUri = process.env.MOGOURI || 'mongodb://localhost/shortio';
 const server = new Hapi.Server();
 
 // Mongo
